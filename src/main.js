@@ -28,13 +28,13 @@ const navItems = [
 document.querySelector('#app').innerHTML = `
   <header class="mobile-header">
     <a class="brand" href="#about"><span>JB</span> Jo Vincent</a>
-    <button class="icon-button menu-button" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+    <button class="icon-button menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
   </header>
   <div class="sidebar-backdrop" aria-hidden="true"></div>
   <aside class="sidebar" aria-label="Main navigation">
     <div class="sidebar-top">
       <a class="brand" href="#about"><span>JB</span><strong>Jo Vincent<br />Beldad</strong></a>
-      <button class="icon-button close-button" aria-label="Close navigation"><i data-lucide="x"></i></button>
+      <button class="icon-button close-button" type="button" aria-label="Close navigation"><i data-lucide="x"></i></button>
     </div>
     <img class="profile-photo" src="${portrait}" alt="Portrait of Jo Vincent Beldad" />
     <p class="eyebrow">BSIT Student · OJT Applicant</p>
@@ -76,8 +76,8 @@ document.querySelector('#app').innerHTML = `
       <footer><span>© 2026 Jo Vincent Beldad</span><span>Designed & built with intention.</span></footer>
     </section>
   </main>
-  <button class="chat-toggle" aria-label="Open portfolio assistant" aria-expanded="false"><i data-lucide="message-circle"></i></button>
-  <section class="chat-panel" aria-label="Portfolio assistant" hidden><div class="chat-header"><div><i data-lucide="bot"></i><strong>Jo’s assistant</strong></div><button class="icon-button chat-close" aria-label="Close assistant"><i data-lucide="x"></i></button></div><div class="chat-messages"></div><form class="chat-form"><input aria-label="Ask a question" placeholder="Ask about Jo’s skills..." /><button aria-label="Send message"><i data-lucide="arrow-up"></i></button></form></section>
+  <button class="chat-toggle" type="button" aria-label="Open portfolio assistant" aria-expanded="false"><i data-lucide="message-circle"></i></button>
+  <section class="chat-panel" aria-label="Portfolio assistant" hidden><div class="chat-header"><div><i data-lucide="bot"></i><strong>Jo’s assistant</strong></div><button class="icon-button chat-close" type="button" aria-label="Close assistant"><i data-lucide="x"></i></button></div><div class="chat-messages" aria-live="polite"></div><form class="chat-form"><input aria-label="Ask a question" placeholder="Ask about Jo’s skills..." /><button type="submit" aria-label="Send message"><i data-lucide="arrow-up"></i></button></form></section>
 `;
 
 createIcons({ icons });
@@ -123,6 +123,12 @@ const openChat = (open) => {
 };
 chatToggle.addEventListener('click', () => openChat(chatPanel.hidden));
 document.querySelector('.chat-close').addEventListener('click', () => openChat(false));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setMenu(false);
+    openChat(false);
+  }
+});
 document.querySelector('.chat-form').addEventListener('submit', (event) => {
   event.preventDefault();
   const question = input.value.trim();
