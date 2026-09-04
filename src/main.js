@@ -130,6 +130,6 @@ document.querySelector('.chat-form').addEventListener('submit', (event) => {
   addMessage(question, 'user');
   input.value = '';
   const lower = question.toLowerCase();
-  const answer = lower.includes('project') ? 'Jo has worked on an ID Management System, The Daily Grind e-commerce site, and a Cisco Packet Tracer network design.' : lower.includes('skill') || lower.includes('learn') ? 'Jo’s foundation includes HTML/CSS, JavaScript, PHP, Python, MySQL, networking, troubleshooting, and data management.' : lower.includes('contact') || lower.includes('email') || lower.includes('ojt') ? 'Jo is open to OJT opportunities. Email vencbeldadjo@outlook.com to start a conversation.' : 'I can share details about Jo’s skills, projects, education, and OJT availability.';
+  const answer = lower.includes('project') ? 'Jo has worked on an ID Management System, The Daily Grind e-commerce site, and a Cisco Packet Tracer network design.' : lower.includes('skill') || lower.includes('learn') ? 'Jo’s foundation includes HTML/CSS, JavaScript, PHP, Python, MySQL, networking, troubleshooting, and data management.' : lower.includes('phone') || lower.includes('telephone') || lower.includes('mobile') || lower.includes('call') ? 'Jo’s phone number is 09123456789.' : lower.includes('contact') || lower.includes('email') || lower.includes('ojt') ? 'Jo is open to OJT opportunities. Email vencbeldadjo@outlook.com to start a conversation.' : 'I can share details about Jo’s skills, projects, education, and OJT availability.';
   window.setTimeout(() => addMessage(answer), 350);
 });
