@@ -51,7 +51,7 @@ document.querySelector('#app').innerHTML = `
         <p class="eyebrow accent">Hello, I’m Jo Vincent</p>
         <h1>Building a strong start in <em>technology.</em></h1>
         <p class="hero-lead">A motivated Information Technology student who enjoys turning ideas into useful, thoughtful digital experiences.</p>
-        <div class="hero-actions"><a class="button button-primary" href="/assets/Beldad_Resume.docx" download="Jo-Vincent-Beldad-Resume.docx"><i data-lucide="download"></i> Download resume</a><a class="text-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="/assets/Beldad_Resume.docx" download="Jo-Vincent-Beldad-Resume.docx"><i data-lucide="download"></i> Download resume</a><a class="text-link connect-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
       </div>
       <div class="scroll-cue"><span>01</span><div></div><span>Scroll to explore</span></div>
     </section>
@@ -97,6 +97,11 @@ document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('
 
 const sections = document.querySelectorAll('main section[id]');
 const links = document.querySelectorAll('.nav-link');
+document.querySelector('.connect-link').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.history.replaceState(null, '', '#contact');
+});
 const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
   if (entry.isIntersecting) links.forEach((link) => link.classList.toggle('active', link.dataset.section === entry.target.id));
 }), { rootMargin: '-35% 0px -55% 0px' });
