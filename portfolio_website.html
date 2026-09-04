@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Vincent Beldad | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sidebar: '#111827', // gray-900
+                        primary: '#2563eb', // blue-600
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col md:flex-row min-h-screen">
+
+    <header class="md:hidden bg-sidebar text-white p-4 flex justify-between items-center sticky top-0 z-40 shadow-md">
+        <div class="font-semibold text-lg">Jo Vincent Beldad</div>
+        <button id="mobile-menu-btn" class="text-white hover:text-gray-300 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden transition-opacity"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-sidebar text-gray-300 transition-transform transform -translate-x-full md:translate-x-0 z-50 flex flex-col overflow-y-auto duration-300 ease-in-out">
+        
+        <!-- Profile Section (Top Left) -->
+        <div class="p-6 bg-gray-900 text-center border-b border-gray-800">
+            <!-- Initials Avatar -->
+            <div class="w-24 h-24 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
+                JB
+            </div>
+            <h1 class="text-xl font-bold text-white mb-1">Jo Vincent Beldad</h1>
+            <p class="text-xs text-gray-400 font-medium tracking-wide uppercase">BSIT Student | OJT</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-1 px-4 py-6 space-y-2">
+            <a href="#about" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-colors">
+                <i data-lucide="user" class="w-5 h-5"></i> About Me
+            </a>
+            <a href="#skills" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-colors">
+                <i data-lucide="code" class="w-5 h-5"></i> Skills
+            </a>
+            <a href="#projects" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-colors">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i> Projects
+            </a>
+            <a href="#education" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-colors">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i> Education
+            </a>
+            <a href="#contact" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i> Contact
+            </a>
+        </nav>
+
+        <!-- Sidebar Footer / Socials -->
+        <div class="p-4 border-t border-gray-800 text-center">
+            <a href="https://github.com/Shu0405-Ghost" target="_blank" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 md:ml-64 p-6 md:p-12 lg:p-20 max-w-5xl">
+        
+        <!-- About Section -->
+        <section id="about" class="mb-20 pt-8 md:pt-0">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-primary inline-block pb-2">Professional Objective</h2>
+            <p class="text-gray-700 text-lg leading-relaxed max-w-3xl">
+                A motivated BS Information Technology student seeking an On-the-Job Training opportunity to apply classroom knowledge, develop technical and professional skills, gain actual industry experience, and contribute positively to the organization.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary inline-block pb-2">IT Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="laptop" class="w-5 h-5 text-primary"></i> Technical
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        HTML/CSS, basic JavaScript, basic PHP, basic Python, MySQL, basic networking, troubleshooting, data entry and data management.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="wrench" class="w-5 h-5 text-primary"></i> Tools
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Microsoft Word, Excel, PowerPoint, Google Workspace, Canva, Visual Studio Code, GitHub, basic Figma, Cisco Packet Tracer.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 md:col-span-2">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="users" class="w-5 h-5 text-primary"></i> Professional
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Communication, teamwork, problem-solving, time management, adaptability, willingness to learn, attention to detail.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary inline-block pb-2">Academic Projects</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl border border-l-4 border-l-primary shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ID Management System</h3>
+                    <p class="text-gray-600">Created an ID managing system where students can apply to get their official school ID.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-l-4 border-l-primary shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">The Daily Grind</h3>
+                    <p class="text-gray-600">Developed an e-commerce platform featuring a responsive website using PHP.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-l-4 border-l-primary shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Network Design</h3>
+                    <p class="text-gray-600">Created a basic network topology using Cisco Packet Tracer and configured basic IP addressing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Background Section -->
+        <section id="education" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary inline-block pb-2">Education & Background</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education Timeline -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-6 h-6 text-primary"></i> Formal Education
+                    </h3>
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent pl-8 md:pl-0">
+                        
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active pl-8 md:pl-0">
+                            <div class="flex items-center justify-center w-4 h-4 rounded-full border-2 border-white bg-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-primary absolute left-0 md:left-1/2 -translate-x-1/2 md:translate-x-0"></div>
+                            <div class="w-[calc(100%-2rem)] md:w-[calc(50%-1.5rem)] p-4 rounded-xl shadow-sm bg-white border border-gray-100">
+                                <div class="font-bold text-gray-900 text-lg">BS Information Technology</div>
+                                <div class="text-primary font-medium text-sm mb-1">PHINMA University of Iloilo</div>
+                                <div class="text-gray-500 text-sm">2022 - Present (Expected: 2027)</div>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active pl-8 md:pl-0">
+                            <div class="flex items-center justify-center w-4 h-4 rounded-full border-2 border-white bg-gray-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -translate-x-1/2 md:translate-x-0"></div>
+                            <div class="w-[calc(100%-2rem)] md:w-[calc(50%-1.5rem)] p-4 rounded-xl shadow-sm bg-white border border-gray-100">
+                                <div class="font-bold text-gray-900">Senior High School</div>
+                                <div class="text-gray-700 text-sm mb-1">Balasan National High School</div>
+                                <div class="text-gray-500 text-sm">2020 - 2022</div>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active pl-8 md:pl-0">
+                            <div class="flex items-center justify-center w-4 h-4 rounded-full border-2 border-white bg-gray-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -translate-x-1/2 md:translate-x-0"></div>
+                            <div class="w-[calc(100%-2rem)] md:w-[calc(50%-1.5rem)] p-4 rounded-xl shadow-sm bg-white border border-gray-100">
+                                <div class="font-bold text-gray-900">Elementary</div>
+                                <div class="text-gray-700 text-sm">San Jose Elementary School</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seminars & Orgs -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+                        <i data-lucide="award" class="w-6 h-6 text-primary"></i> Seminars & Trainings
+                    </h3>
+                    <ul class="space-y-3 mb-10">
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700">Basic Web Development Training (2026)</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700">Introduction to Cybersecurity (2026)</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700">Microsoft Excel Fundamentals (2026)</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                            <span class="text-gray-700">Student Leadership and Professional Development Seminar (2025)</span>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <i data-lucide="users" class="w-6 h-6 text-primary"></i> Organizations
+                    </h3>
+                    <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+                        <h4 class="font-bold text-gray-900">Member – UI Programing Circle</h4>
+                        <p class="text-primary text-sm font-medium mb-2">2024 – Present</p>
+                        <p class="text-gray-600 text-sm">Participated in IT-related activities, seminars, departmental events, and team-based projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & References Section -->
+        <section id="contact" class="mb-10 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-primary inline-block pb-2">Get In Touch</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <!-- Contact Details -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Location</h4>
+                                <p class="text-gray-600 text-sm">Molo, Iloilo, Philippines<br>Poblacion Batad, Iloilo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Phone</h4>
+                                <p class="text-gray-600 text-sm">09123456789</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email</h4>
+                                <a href="mailto:Jobe.beldad.ui@phinmaed.com" class="block text-gray-600 text-sm hover:text-primary">Jobe.beldad.ui@phinmaed.com</a>
+                                <a href="mailto:vencbeldadjo@outlook.com" class="block text-gray-600 text-sm hover:text-primary">vencbeldadjo@outlook.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Professional References</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-gray-200 pl-4">
+                            <h4 class="font-bold text-gray-900">Dean Seth DA. Nono, MSCS</h4>
+                            <p class="text-primary text-sm font-medium">DEAN, CITE</p>
+                            <p class="text-gray-600 text-sm mb-1">PHINMA University of Iloilo</p>
+                            <p class="text-gray-500 text-sm flex items-center gap-2"><i data-lucide="phone" class="w-3 h-3"></i> 09----------</p>
+                        </div>
+                        <div class="border-l-2 border-gray-200 pl-4">
+                            <h4 class="font-bold text-gray-900">Ms. Jocel C. Gallo, MBA</h4>
+                            <p class="text-primary text-sm font-medium">Teacher, CITE</p>
+                            <p class="text-gray-600 text-sm mb-1">PHINMA University of Iloilo</p>
+                            <p class="text-gray-500 text-sm flex items-center gap-2"><i data-lucide="phone" class="w-3 h-3"></i> 09673060018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm pb-8 md:pb-0">
+            <p>&copy; 2026 Jo Vincent Beldad. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- AI Chatbot Toggle Button -->
+    <button id="chat-toggle" class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50 focus:outline-none flex items-center justify-center">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+    </button>
+
+    <!-- AI Chatbot Panel -->
+    <div id="chat-panel" class="fixed bottom-24 right-6 w-80 sm:w-96 bg-white border border-gray-200 rounded-xl shadow-2xl flex-col hidden z-50 overflow-hidden h-[450px]">
+        <!-- Header -->
+        <div class="bg-primary text-white p-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bot" class="w-5 h-5"></i>
+                <h3 class="font-semibold">Jo's AI Assistant</h3>
+            </div>
+            <button id="chat-close" class="text-white hover:text-gray-200 focus:outline-none">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        
+        <!-- Messages Area -->
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-50 flex flex-col gap-3 text-sm">
+            <!-- Messages will be injected here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-3 border-t border-gray-200 bg-white flex gap-2 items-center">
+            <input type="text" id="chat-input" placeholder="Ask about my skills or projects..." class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm">
+            <button id="chat-send" class="bg-primary text-white p-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none">
+                <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Sidebar Toggle Logic
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function toggleSidebar() {
+            const isOpen = !sidebar.classList.contains('-translate-x-full');
+            
+            if (isOpen) {
+                // Close
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                // Open
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Close sidebar when clicking a link on mobile
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // md breakpoint
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // AI Chatbot Logic
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatClose = document.getElementById('chat-close');
+        const chatPanel = document.getElementById('chat-panel');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+
+        let isChatOpen = false;
+        let chatHistory = [];
+        let isWaitingForResponse = false;
+
+        // The system prompt gives the LLM its persona and knowledge base
+        const systemPrompt = `You are a helpful, professional, and friendly AI assistant for Jo Vincent Beldad's portfolio website. 
+Your goal is to answer questions from recruiters or visitors about Jo based ONLY on the following context:
+
+Name: Jo Vincent Beldad
+Role: BS Information Technology Student | OJT Applicant
+Location: Molo, Iloilo, Philippines / Poblacion Batad, Iloilo
+Objective: A motivated BS Information Technology student seeking an On-the-Job Training opportunity to apply classroom knowledge, develop technical and professional skills, gain actual industry experience, and contribute positively to the organization.
+Technical Skills: HTML/CSS, basic JavaScript, basic PHP, basic Python, MySQL, basic networking, troubleshooting, data entry and data management.
+Tools: Microsoft Word, Excel, PowerPoint, Google Workspace, Canva, Visual Studio Code, GitHub, basic Figma, Cisco Packet Tracer.
+Soft Skills: Communication, teamwork, problem-solving, time management, adaptability, willingness to learn, attention to detail.
+Projects:
+1. ID Management System: Created an ID managing system where students can apply to get their official school ID.
+2. The Daily Grind: Developed an e-commerce platform featuring a responsive website using PHP.
+3. Network Design: Created a basic network topology using Cisco Packet Tracer and configured basic IP addressing.
+Education: BS Information Technology at PHINMA University of Iloilo (2022-Present, Expected 2027). Senior High at Balasan National High School (2020-2022).
+Contact Email: Jobe.beldad.ui@phinmaed.com or vencbeldadjo@outlook.com
+
+Keep your answers concise, engaging, and professional. If asked something outside this context, politely state that you only have information regarding Jo's professional IT portfolio.`;
+
+        function toggleChat() {
+            isChatOpen = !isChatOpen;
+            if (isChatOpen) {
+                chatPanel.classList.remove('hidden');
+                chatPanel.classList.add('flex');
+                if (chatMessages.children.length === 0) {
+                    addMessage('bot', "Hi! I'm Jo's AI Assistant. Feel free to ask me about his IT skills, academic projects, or OJT availability!");
+                }
+                chatInput.focus();
+            } else {
+                chatPanel.classList.add('hidden');
+                chatPanel.classList.remove('flex');
+            }
+        }
+
+        chatToggle.addEventListener('click', toggleChat);
+        chatClose.addEventListener('click', toggleChat);
+
+        function addMessage(sender, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('max-w-[85%]', 'rounded-lg', 'p-3');
+            
+            if (sender === 'user') {
+                msgDiv.classList.add('bg-primary', 'text-white', 'self-end', 'rounded-br-none');
+                msgDiv.textContent = text;
+            } else {
+                msgDiv.classList.add('bg-gray-200', 'text-gray-800', 'self-start', 'rounded-bl-none');
+                // Format basic markdown/line breaks for bot responses
+                msgDiv.innerHTML = text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            }
+
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const indicator = document.createElement('div');
+            indicator.id = 'typing-indicator';
+            indicator.classList.add('bg-gray-200', 'text-gray-500', 'self-start', 'rounded-lg', 'rounded-bl-none', 'p-3', 'text-xs', 'flex', 'gap-1', 'items-center');
+            indicator.innerHTML = '<span class="animate-bounce">●</span><span class="animate-bounce" style="animation-delay: 0.2s">●</span><span class="animate-bounce" style="animation-delay: 0.4s">●</span>';
+            chatMessages.appendChild(indicator);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) indicator.remove();
+        }
+
+        async function handleSend() {
+            const text = chatInput.value.trim();
+            if (!text || isWaitingForResponse) return;
+
+            // 1. Add user message to UI and history
+            addMessage('user', text);
+            chatInput.value = '';
+            chatHistory.push({ role: "user", parts: [{ text: text }] });
+            
+            isWaitingForResponse = true;
+            showTypingIndicator();
+
+            try {
+                const apiKey = ""; // API key is handled automatically by the environment
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: chatHistory,
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                
+                removeTypingIndicator();
+
+                if (result.candidates && result.candidates[0].content) {
+                    const botReply = result.candidates[0].content.parts[0].text;
+                    addMessage('bot', botReply);
+                    // Add bot response to history to maintain conversational context
+                    chatHistory.push({ role: "model", parts: [{ text: botReply }] });
+                } else {
+                    addMessage('bot', "I'm sorry, I'm having trouble connecting right now. Please check my contact section to reach out directly!");
+                }
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                removeTypingIndicator();
+                addMessage('bot', "Oops, something went wrong on my end. Please try again later!");
+            } finally {
+                isWaitingForResponse = false;
+                // Re-initialize Lucide icons in case the bot used markdown that looks like tags (preventing visual glitches)
+                lucide.createIcons();
+            }
+        }
+
+        chatSend.addEventListener('click', handleSend);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSend();
+        });
+
+    </script>
+</body>
+</html>
