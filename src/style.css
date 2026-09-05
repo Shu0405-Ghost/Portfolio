@@ -27,6 +27,7 @@ nav { display: grid; gap: 7px; margin-top: 48px; }
 .sidebar-footer { margin-top: auto; display: grid; gap: 13px; font-size: 11px; }
 .sidebar-footer span { color: var(--lime); }
 .sidebar-footer a { display: flex; gap: 8px; align-items: center; color: #d0d5dd; }
+.sidebar-footer .sidebar-socials { display: grid; gap: 8px; }
 .sidebar-footer .sidebar-resume-link { color: white; }
 .sidebar-footer .sidebar-resume-link:hover { color: var(--lime); }
 .sidebar-footer svg { width: 15px; }

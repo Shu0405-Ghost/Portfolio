@@ -42,7 +42,10 @@ document.querySelector('#app').innerHTML = `
     <div class="sidebar-footer">
       <span>Open to opportunities</span>
       <a class="sidebar-resume-link" href="/assets/Beldad_Resume.docx" download="Jo-Vincent-Beldad-Resume.docx"><i data-lucide="download"></i> Download resume</a>
-      <a href="https://github.com/Shu0405-Ghost" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+      <div class="sidebar-socials">
+        <a href="https://github.com/Shu0405-Ghost" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> GitHub</a>
+        <a href="https://jvbb.vercel.app" target="_blank" rel="noopener noreferrer"><i data-lucide="globe"></i> Vercel</a>
+      </div>
     </div>
   </aside>
   <main>
