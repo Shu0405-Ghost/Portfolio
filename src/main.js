@@ -9,7 +9,7 @@ const skills = [
 ];
 
 const projects = [
-  { number: '01', title: 'ID Management System', description: 'A student-facing system for applying for and managing official school IDs.', tags: ['PHP', 'MySQL', 'CRUD'] },
+  { number: '01', title: 'ID Management System', description: 'A student-facing system for applying for and managing official school IDs, built with Python Flask.', tags: ['Python', 'Flask', 'CRUD'] },
   { number: '02', title: 'The Daily Grind', description: 'A responsive e-commerce website for a coffee brand, built to make browsing and shopping simple.', tags: ['PHP', 'E-commerce', 'Responsive UI'] },
   { number: '03', title: 'FlexSpace', description: 'A modern coworking space booking platform for Iloilo City, connecting users with available workspaces for browsing, booking and management.', tags: ['Booking Platform', 'Responsive UI', 'Product Design'] },
 ];
