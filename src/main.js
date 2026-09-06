@@ -103,7 +103,14 @@ const setMenu = (open) => {
 menuButton.addEventListener('click', () => setMenu(true));
 document.querySelector('.close-button').addEventListener('click', () => setMenu(false));
 backdrop.addEventListener('click', () => setMenu(false));
-document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', (event) => {
+  event.preventDefault();
+  const target = document.querySelector(link.getAttribute('href'));
+  if (!target) return;
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.history.replaceState(null, '', link.getAttribute('href'));
+  setMenu(false);
+}));
 
 const sections = document.querySelectorAll('main section[id]');
 const links = document.querySelectorAll('.nav-link');
