@@ -87,7 +87,7 @@ h2 { font-size: clamp(42px, 5vw, 64px); margin: 15px 0 0; }
 .contact-details span { color: #667085; text-transform: uppercase; font: 10px 'DM Mono', monospace; }
 .contact-details a, .contact-details p { color: #d0d5dd; font-size: 13px; margin: 0; }
 .contact-details a:hover { color: var(--lime); }
-.contact-form { display: grid; gap: 8px; padding: 24px; border: 1px solid #27344a; border-radius: 16px; background: #080e1a; }
+.contact-form { width: min(100%, 360px); justify-self: end; display: grid; gap: 8px; padding: 24px; border: 1px solid #27344a; border-radius: 16px; background: #080e1a; }
 .contact-form label { color: #98a2b3; font-size: 11px; font-weight: 700; margin-top: 8px; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid #27344a; border-radius: 11px; color: white; background: #111a2c; padding: 13px 15px; font: 13px Manrope, sans-serif; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #667085; }
@@ -139,6 +139,6 @@ footer { display: flex; justify-content: space-between; color: #98a2b3; font: 10
   .project-arrow { display: none; }
   .contact-panel { padding: 35px 25px; }
   .contact-details { border-left: 0; border-top: 1px solid #ffffff26; margin-top: 40px; padding: 30px 0 0; }
-  .contact-form { margin-top: 35px; }
+  .contact-form { width: 100%; margin-top: 35px; }
   footer { display: grid; gap: 8px; }
 }
