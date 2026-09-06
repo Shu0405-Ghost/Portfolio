@@ -49,7 +49,7 @@ const navItems = [
   ['contact', 'Contact', 'send'],
 ];
 
-const requestResumeUrl = `mailto:${CONTACT_EMAIL}?subject=Request%20for%20Resume`;
+const requestResumeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}&su=Request%20for%20Resume`;
 const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}`;
 
 const renderNavigation = () => navItems
