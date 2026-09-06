@@ -39,7 +39,7 @@ document.querySelector('#app').innerHTML = `
     <nav>${navItems.map(([id, label, icon]) => `<a class="nav-link" href="#${id}" data-section="${id}"><i data-lucide="${icon}"></i><span>${label}</span></a>`).join('')}</nav>
     <div class="sidebar-footer">
       <span>Open to OJT opportunities</span>
-      <a class="sidebar-resume-link" href="/assets/Beldad_Resume.docx" download="Jo-Vincent-Beldad-Resume.docx"><i data-lucide="download"></i> Download resume</a>
+      <a class="sidebar-resume-link" href="mailto:vencbeldadjo@outlook.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a>
       <div class="sidebar-socials">
         <a href="https://github.com/Shu0405-Ghost" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> GitHub</a>
         <a href="https://jvbb.vercel.app" target="_blank" rel="noopener noreferrer"><i data-lucide="globe"></i> Vercel</a>
@@ -52,7 +52,7 @@ document.querySelector('#app').innerHTML = `
         <p class="eyebrow accent">BSIT Student · OJT Applicant</p>
         <h1>Ready to learn, contribute, and grow in <em>technology.</em></h1>
         <p class="hero-lead">BS Information Technology student eager to secure an On-the-Job Training position to apply technical expertise, collaborate on development initiatives, and gain hands-on operational experience.</p>
-        <div class="hero-actions"><a class="button button-primary" href="/assets/Beldad_Resume.docx" download="Jo-Vincent-Beldad-Resume.docx"><i data-lucide="download"></i> Download resume</a><a class="text-link connect-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="mailto:vencbeldadjo@outlook.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a><a class="text-link connect-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
       </div>
       <div class="scroll-cue"><span>01</span><div></div><span>Scroll to explore</span></div>
     </section>
