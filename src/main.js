@@ -82,7 +82,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
     <section id="contact" class="section contact-section">
-      <div class="contact-panel"><div><p class="eyebrow accent">OJT opportunities</p><h2>Let’s start<br /><em>a conversation.</em></h2><p class="contact-copy">I’m eager to join a team where I can apply my IT foundation, contribute to development initiatives, and gain hands-on operational experience.</p><a class="button button-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">Send me an email <i data-lucide="arrow-up-right"></i></a></div><form class="contact-form"><label for="contact-name">Your Name</label><input id="contact-name" name="name" type="text" placeholder="Jo" required /><label for="contact-email">Your Email</label><input id="contact-email" name="email" type="email" placeholder="john@example.com" required /><label for="contact-message">Message</label><textarea id="contact-message" name="message" placeholder="Hi Jo, let's connect..." required></textarea><button class="contact-submit" type="submit">Send Message</button></form></div>
+      <div class="contact-panel"><div><p class="eyebrow accent">OJT opportunities</p><h2>Let’s start<br /><em>a conversation.</em></h2><p class="contact-copy">I’m eager to join a team where I can apply my IT foundation, contribute to development initiatives, and gain hands-on operational experience.</p><a class="button button-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">Send me an email <i data-lucide="arrow-up-right"></i></a></div><div class="contact-details"><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">vencbeldadjo@outlook.com</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Jobe.beldad.ui@phinmaed.com" target="_blank" rel="noreferrer">Jobe.beldad.ui@phinmaed.com</a></div><div><span>Based in</span><p>Molo, Iloilo, Philippines<br />Poblacion, Batad, Iloilo</p></div><div><span>Phone</span><a href="tel:09123456789">09123456789</a><a href="tel:09673060018">09673060018</a></div></div></div>
       <div class="contact-details"><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">vencbeldadjo@outlook.com</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Jobe.beldad.ui@phinmaed.com" target="_blank" rel="noreferrer">Jobe.beldad.ui@phinmaed.com</a></div><div><span>Based in</span><p>Molo, Iloilo, Philippines<br />Poblacion, Batad, Iloilo</p></div><div><span>Phone</span><a href="tel:09123456789">09123456789</a><a href="tel:09673060018">09673060018</a></div></div>
       <footer><span>© 2026 Jo Vincent Beldad</span><span>Designed & built with intention.</span></footer>
     </section>
@@ -119,14 +119,6 @@ document.querySelector('.connect-link').addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
   window.history.replaceState(null, '', '#contact');
-});
-document.querySelector('.contact-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const data = new FormData(form);
-  const subject = `Portfolio message from ${data.get('name')}`;
-  const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`;
-  window.location.href = `mailto:vencbeldadjo@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
   if (entry.isIntersecting) links.forEach((link) => link.classList.toggle('active', link.dataset.section === entry.target.id));
