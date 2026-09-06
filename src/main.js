@@ -39,7 +39,7 @@ document.querySelector('#app').innerHTML = `
     <nav>${navItems.map(([id, label, icon]) => `<a class="nav-link" href="#${id}" data-section="${id}"><i data-lucide="${icon}"></i><span>${label}</span></a>`).join('')}</nav>
     <div class="sidebar-footer">
       <span>Open to OJT opportunities</span>
-      <a class="sidebar-resume-link" href="mailto:vencbeldadjo@outlook.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a>
+      <a class="sidebar-resume-link" href="mailto:beldadjo@gmail.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a>
       <div class="sidebar-socials">
         <a href="https://github.com/Shu0405-Ghost" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> GitHub</a>
         <a href="https://jvbb.vercel.app" target="_blank" rel="noopener noreferrer"><i data-lucide="globe"></i> Vercel</a>
@@ -52,7 +52,7 @@ document.querySelector('#app').innerHTML = `
         <p class="eyebrow accent">BSIT Student · OJT Applicant</p>
         <h1>Ready to learn, contribute, and grow in <em>technology.</em></h1>
         <p class="hero-lead">BS Information Technology student eager to secure an On-the-Job Training position to apply technical expertise, collaborate on development initiatives, and gain hands-on operational experience.</p>
-        <div class="hero-actions"><a class="button button-primary" href="mailto:vencbeldadjo@outlook.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a><a class="text-link connect-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="mailto:beldadjo@gmail.com?subject=Request%20for%20Resume"><i data-lucide="mail"></i> Request resume</a><a class="text-link connect-link" href="#contact">Let’s connect <i data-lucide="arrow-up-right"></i></a></div>
       </div>
       <div class="scroll-cue"><span>01</span><div></div><span>Scroll to explore</span></div>
     </section>
@@ -82,7 +82,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
     <section id="contact" class="section contact-section">
-      <div class="contact-panel"><div><p class="eyebrow accent">OJT opportunities</p><h2>Let’s start<br /><em>a conversation.</em></h2><p class="contact-copy">I’m eager to join a team where I can apply my IT foundation, contribute to development initiatives, and gain hands-on operational experience.</p><a class="button button-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">Send me an email <i data-lucide="arrow-up-right"></i></a></div><div class="contact-details"><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vencbeldadjo@outlook.com" target="_blank" rel="noreferrer">vencbeldadjo@outlook.com</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Jobe.beldad.ui@phinmaed.com" target="_blank" rel="noreferrer">Jobe.beldad.ui@phinmaed.com</a></div><div><span>Based in</span><p>Molo, Iloilo, Philippines<br />Poblacion, Batad, Iloilo</p></div><div><span>Phone</span><a href="tel:09123456789">09123456789</a><a href="tel:09673060018">09673060018</a></div></div></div>
+      <div class="contact-panel"><div><p class="eyebrow accent">OJT opportunities</p><h2>Let’s start<br /><em>a conversation.</em></h2><p class="contact-copy">I’m eager to join a team where I can apply my IT foundation, contribute to development initiatives, and gain hands-on operational experience.</p><a class="button button-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=beldadjo@gmail.com" target="_blank" rel="noreferrer">Send me an email <i data-lucide="arrow-up-right"></i></a></div><div class="contact-details"><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=beldadjo@gmail.com" target="_blank" rel="noreferrer">beldadjo@gmail.com</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Jobe.beldad.ui@phinmaed.com" target="_blank" rel="noreferrer">Jobe.beldad.ui@phinmaed.com</a></div><div><span>Based in</span><p>Molo, Iloilo, Philippines<br />Poblacion, Batad, Iloilo</p></div><div><span>Phone</span><a href="tel:09123456789">09123456789</a><a href="tel:09673060018">09673060018</a></div></div></div>
       <footer><span>© 2026 Jo Vincent Beldad</span><span>Designed & built with intention.</span></footer>
     </section>
   </main>
@@ -158,6 +158,6 @@ document.querySelector('.chat-form').addEventListener('submit', (event) => {
   addMessage(question, 'user');
   input.value = '';
   const lower = question.toLowerCase();
-  const answer = lower.includes('project') ? 'Jo has worked on an ID Management System, The Daily Grind e-commerce site, and FlexSpace, a coworking space booking platform.' : lower.includes('skill') || lower.includes('learn') ? 'Jo’s foundation includes HTML/CSS, basic JavaScript, PHP, Python, MySQL, networking, troubleshooting, data management, productivity tools, and teamwork.' : lower.includes('phone') || lower.includes('telephone') || lower.includes('mobile') || lower.includes('call') ? 'Jo’s phone numbers are 09123456789 and 09673060018.' : lower.includes('contact') || lower.includes('email') || lower.includes('ojt') ? 'Jo is open to OJT opportunities. Email vencbeldadjo@outlook.com to start a conversation.' : 'I can share details about Jo’s skills, projects, education, seminars, and OJT availability.';
+  const answer = lower.includes('project') ? 'Jo has worked on an ID Management System, The Daily Grind e-commerce site, and FlexSpace, a coworking space booking platform.' : lower.includes('skill') || lower.includes('learn') ? 'Jo’s foundation includes HTML/CSS, basic JavaScript, PHP, Python, MySQL, networking, troubleshooting, data management, productivity tools, and teamwork.' : lower.includes('phone') || lower.includes('telephone') || lower.includes('mobile') || lower.includes('call') ? 'Jo’s phone numbers are 09123456789 and 09673060018.' : lower.includes('contact') || lower.includes('email') || lower.includes('ojt') ? 'Jo is open to OJT opportunities. Email beldadjo@gmail.com to start a conversation.' : 'I can share details about Jo’s skills, projects, education, seminars, and OJT availability.';
   window.setTimeout(() => addMessage(answer), 350);
 });
