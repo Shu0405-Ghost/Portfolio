@@ -4,7 +4,7 @@ import portrait from '../assets/pic.png';
 
 const skills = [
   ['Technical', 'HTML/CSS, basic JavaScript, basic PHP, basic Python, MySQL, basic networking, troubleshooting, data entry and data management.'],
-  ['Tools', 'Microsoft Word, Excel, PowerPoint, Google Workspace, Canva, Visual Studio Code, GitHub and basic Figma.'],
+  ['Tools', 'Microsoft Word, Excel, PowerPoint, Google Workspace, Canva, Visual Studio Code, GitHub, Godot Engine and basic Figma.'],
   ['Professional', 'Communication, teamwork, problem-solving, time management, adaptability, willingness to learn and attention to detail.'],
 ];
 
