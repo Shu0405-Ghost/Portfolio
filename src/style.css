@@ -4,9 +4,12 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: Manrope, sans-serif; }
+body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 10px 14px; color: var(--navy); background: var(--lime); border-radius: 6px; font-size: 12px; font-weight: 800; transform: translateY(-150%); transition: transform .2s ease; }
+.skip-link:focus { transform: translateY(0); }
 .mobile-header { display: none; }
 .sidebar { background: var(--navy); color: #98a2b3; width: 280px; min-height: 100vh; position: fixed; z-index: 20; display: flex; flex-direction: column; padding: 34px 28px 28px; }
 .sidebar-top { display: flex; align-items: center; justify-content: space-between; }
@@ -103,6 +106,7 @@ footer { display: flex; justify-content: space-between; color: #98a2b3; font: 10
 .chat-form input:focus { border-color: var(--blue); }
 .chat-form button { border: 0; border-radius: 6px; width: 38px; color: white; background: var(--blue); cursor: pointer; }
 .chat-form svg { width: 16px; }
+::selection { color: var(--navy); background: var(--lime); }
 @media (max-width: 850px) {
   .mobile-header { display: flex; position: fixed; z-index: 15; top: 0; width: 100%; padding: 16px 20px; justify-content: space-between; align-items: center; background: #ffffffed; border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
   .mobile-header .brand { color: var(--navy); }
@@ -132,4 +136,7 @@ footer { display: flex; justify-content: space-between; color: #98a2b3; font: 10
   .contact-panel { padding: 35px 25px; }
   .contact-details { border-left: 0; border-top: 1px solid #ffffff26; margin-top: 40px; padding: 30px 0 0; }
   footer { display: grid; gap: 8px; }
+  .hero-actions { align-items: stretch; flex-direction: column; gap: 16px; }
+  .hero-actions .button { justify-content: center; }
+  .contact-panel h2 { font-size: 46px; }
 }

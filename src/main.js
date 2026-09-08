@@ -105,6 +105,7 @@ const renderContactDetails = () => `
 `;
 
 const renderSite = () => `
+  <a class="skip-link" href="#about">Skip to content</a>
   <header class="mobile-header">
     <a class="brand" href="#about"><span>JB</span> Jo Vincent</a>
     <button class="icon-button menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -123,7 +124,7 @@ const renderSite = () => `
     </div>
     <img class="profile-photo" src="${portrait}" alt="Portrait of Jo Vincent Beldad" />
     <p class="eyebrow">BSIT Student · OJT Applicant</p>
-    <nav>${renderNavigation()}</nav>
+    <nav aria-label="Primary">${renderNavigation()}</nav>
     <div class="sidebar-footer">
       <span>Open to OJT opportunities</span>
       <a class="sidebar-resume-link" href="${requestResumeUrl}">
@@ -140,7 +141,7 @@ const renderSite = () => `
     </div>
   </aside>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section id="about" class="hero section">
       <div class="hero-copy">
         <p class="eyebrow accent">BSIT Student · OJT Applicant</p>
@@ -218,7 +219,7 @@ const renderSite = () => `
   <button class="chat-toggle" type="button" aria-label="Open portfolio assistant" aria-expanded="false">
     <i data-lucide="message-circle"></i>
   </button>
-  <section class="chat-panel" aria-label="Portfolio assistant" hidden>
+  <section class="chat-panel" aria-label="Portfolio assistant" role="dialog" aria-modal="false" hidden>
     <div class="chat-header">
       <div><i data-lucide="bot"></i><strong>Jo’s assistant</strong></div>
       <button class="icon-button chat-close" type="button" aria-label="Close assistant"><i data-lucide="x"></i></button>
@@ -246,6 +247,7 @@ const setMenu = (open) => {
   sidebar.classList.toggle('open', open);
   backdrop.classList.toggle('visible', open);
   menuButton.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('menu-open', open);
 };
 
 const addMessage = (message, sender = 'bot') => {
@@ -269,6 +271,9 @@ const openChat = (open) => {
 menuButton.addEventListener('click', () => setMenu(true));
 document.querySelector('.close-button').addEventListener('click', () => setMenu(false));
 backdrop.addEventListener('click', () => setMenu(false));
+document.querySelector('.skip-link').addEventListener('click', () => {
+  document.querySelector('#main-content').focus();
+});
 chatToggle.addEventListener('click', () => openChat(chatPanel.hidden));
 document.querySelector('.chat-close').addEventListener('click', () => openChat(false));
 
